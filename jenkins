@@ -1,0 +1,33 @@
+pipeline
+{
+    agent any
+    stages
+    {
+        stage('ContDownlaod')
+        {
+            steps
+            {
+                git 'https://github.com/Himateja2122/E-commerce.git'
+            }
+        }
+            stage('ContBuild')
+            {
+            steps
+                {
+                    sh 'mvn package'
+                }
+            }
+            
+            stage('ContDeploye')
+            {
+                steps
+                {
+                    deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: '43ed2f52-3c3b-4967-b0f3-587f02a0c2de', path: '', url: 'http://65.2.81.88:8080')], contextPath: 'test1', war: '**/*.war'
+                }
+            }
+                
+                
+                
+            }
+    }
+

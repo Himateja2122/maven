@@ -1,0 +1,12 @@
+<html>
+<head>
+    <title>Checkout</title>
+</head>
+<body>
+
+<h1>Order Placed Successfully!</h1>
+
+<a href="index.jsp">Back to Home</a>
+
+</body>
+</html>
