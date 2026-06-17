@@ -5,6 +5,6 @@ pool:
   name: 'agent1'
 
 steps:
-- script: cd /home/azureuser/myagent/_work/1/s/ecommerce-app;mvn package
+- script: cd /home/azureuser/myagent/_work/1/s/ecommerce-app;mvn package -U
   displayName: 'Build'
 
